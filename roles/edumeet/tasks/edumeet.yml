@@ -58,7 +58,7 @@
 - name: tear down existing services
   become: true
   docker_compose:
-    project_src: "{{ deployment_directory}}"
+    project_src: "{{ deployment_directory }}"
     state: absent
   when: oldedumeet_dir.stat.exists and oldedumeet_dir.stat.isdir
   ignore_errors: true
