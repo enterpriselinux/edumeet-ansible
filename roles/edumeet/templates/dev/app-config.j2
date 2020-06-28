@@ -2,7 +2,14 @@
 var config =
 {
 	loginEnabled    : {{ login_enabled }},
-	developmentPort : 3443,
+	developmentPort : 3443,sampleRate           : 48000,
+		channelCount         : 1,
+		volume               : 1.0,
+		autoGainControl      : true,
+		echoCancellation     : true,
+		noiseSuppression     : true,
+		voiceActivatedUnmute : false,
+		sampleSize           : 16
 	productionPort  : 443,
 
 	/**
@@ -88,14 +95,14 @@ var config =
 	},
 	defaultAudio :
 	{
-		sampleRate        : 48000,
-		channelCount      : 1,
-		volume            : 1.0,
-		autoGainControl   : true,
-		echoCancellation  : true,
-		noiseSuppression  : true,
-		voiceActivityMute : false,
-		sampleSize        : 16
+		sampleRate           : 48000,
+		channelCount         : 1,
+		volume               : 1.0,
+		autoGainControl      : true,
+		echoCancellation     : true,
+		noiseSuppression     : true,
+		voiceActivatedUnmute : false,
+		sampleSize           : 16
 	},
 
 	/**
@@ -135,7 +142,7 @@ var config =
 	title         : '{{ title }}',
 	// Service & Support URL
 	// if not set then not displayed on the about modals
-	supportUrl           : 'https://support.example.com',
+	supportUrl           : 'https://support.cybergate.lk',
 	// Privacy and dataprotection URL or path
 	// by default privacy/privacy.html
 	// that is a placeholder for your policies
