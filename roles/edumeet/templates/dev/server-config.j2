@@ -9,8 +9,11 @@ const {
 const {
 	CHANGE_ROOM_LOCK,
 	PROMOTE_PEER,
+	MODIFY_ROLE,
 	SEND_CHAT,
 	MODERATE_CHAT,
+	SHARE_AUDIO,
+	SHARE_VIDEO,
 	SHARE_SCREEN,
 	EXTRA_VIDEO,
 	SHARE_FILE,
@@ -76,10 +79,10 @@ module.exports =
 
 			issuerURL     : '{{ issuer_url }}',
 			clientOptions :
-			{
+			{ 
 				client_id     : '{{ client_id }}',
 				client_secret : '{{ client_secret }}',
-				scope       		: 'openid email profile',
+				scope         : 'openid email profile',
 				// where client.example.com is your multiparty meeting server
 				redirect_uri  : '{{ redirect_uri }}'
 			}
@@ -210,7 +213,7 @@ module.exports =
 	// All authenicated users will be AUTHENTICATED,
 	// and those with email ending with @example.com
 	// will also be MODERATOR
-	userMapping : async ({ peer, roomId, userinfo }) =>
+	userMapping : async ({ peer, room, roomId, userinfo }) =>
 	{
 		if (userinfo.email && userinfo.email.endsWith('@example.com'))
 		{
@@ -233,7 +236,7 @@ module.exports =
 	},
 	*/
 	// eslint-disable-next-line no-unused-vars
-	userMapping           : async ({ peer, roomId, userinfo }) =>
+	userMapping           : async ({ peer, room, roomId, userinfo }) =>
 	{
 		if (userinfo.picture != null)
 		{
@@ -284,10 +287,16 @@ module.exports =
 		[CHANGE_ROOM_LOCK] : [ userRoles.MODERATOR ],
 		// The role(s) have permission to promote a peer from the lobby
 		[PROMOTE_PEER]     : [ userRoles.NORMAL ],
+		// The role(s) have permission to give/remove other peers roles
+		[MODIFY_ROLE]      : [ userRoles.NORMAL ],
 		// The role(s) have permission to send chat messages
 		[SEND_CHAT]        : [ userRoles.NORMAL ],
 		// The role(s) have permission to moderate chat
 		[MODERATE_CHAT]    : [ userRoles.MODERATOR ],
+		// The role(s) have permission to share audio
+		[SHARE_AUDIO]      : [ userRoles.NORMAL ],
+		// The role(s) have permission to share video
+		[SHARE_VIDEO]      : [ userRoles.NORMAL ],
 		// The role(s) have permission to share screen
 		[SHARE_SCREEN]     : [ userRoles.NORMAL ],
 		// The role(s) have permission to produce extra video
