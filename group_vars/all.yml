@@ -23,21 +23,19 @@ cert_email: "user@example.com"
 # TURN
 turn_uri: "turn:turn1.cm.cybergate.lk:443?transport=tcp"
 turn_user: cybermeet
-turn_password: 0xcbedcc811c168304ee378374d17a1934
+turn_password: #####################################
 
 # Introduced in version: 3.3.0
 # If you part of the NREN community then
 # goto https://turn.geant.org to get your api key.
 turn_api_uri: "https://turn2.cm.cybergate.lk"
-turn_api_key: "ba53fd6ac160c3f3312209e9bdf1814f246ecf8d2ec9f3406004e55a32a87bcc"
+turn_api_key: "#######################################"
 
 # session cookie secret
 cookie_secret: secret-cookie
 
 # Page head short title
 title: "Cyber Meeting"
-#############################################
-
 
 # Login using OIDC
 login_enabled: 'false'
