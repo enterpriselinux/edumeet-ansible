@@ -86,7 +86,7 @@
 
 - name: "git clone edumeet branch {{ edumeet_branch }}"
   git:
-    repo: 'https://github.com/edumeet/edumeet-docker.git'
+    repo: 'https://github.com/enterpriselinux/edumeet-docker.git'
     dest: "{{ deployment_directory }}"
     version: "{{ edumeet_branch }}"
 
@@ -140,11 +140,10 @@
 - name: "pull docker image edumeet/edumeet:{{edumeet_tag}}"
   become: true
   docker_image:
-    name: edumeet/edumeet
+    name: cybermeet/cybermeet
     tag: "{{edumeet_tag}}"
     source: pull
     force_source: true
-
 # Run container
 - name: Create and start services
   become: true
