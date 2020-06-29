@@ -40,10 +40,10 @@ title: "Cyber Meeting"
 # Login using OIDC
 login_enabled: 'false'
 # OIDC op should support discovery!
-issuer_url: "https://op.example.com"
-client_id: id
-client_secret: secret
-redirect_uri: "https://meet.example.com/auth/callback"
+issuer_url: "https://sso.meeting.cyber.lk/auth/realms/cm/.well-known/openid-configuration"
+client_id: cybermeeting-node1
+client_secret: #####################
+redirect_uri: "https://node1.meeting.cyber.lk/auth/callback"
 
 # enable LTI 1.1 for Learning Management Systems like mooodle
 lti_enabled: 'false'
