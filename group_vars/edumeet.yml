@@ -2,12 +2,12 @@
 # branch https://github.com/edumeet/edumeet-docker
 edumeet_branch: master
 # docker tag https://hub.docker.com/r/edumeet/edumeet/
-edumeet_tag: 3.3.0
+edumeet_tag: latest
 
 # use the appropriate config templete
 # set it to multiparty-meeting version
 # or dev for develop
-config_template_version: 3.3.0
+config_template_version: dev
 
 fqdn_domain: example.com
 
@@ -17,15 +17,15 @@ cert_domains:
 cert_email: user@example.com
 
 # TURN
-turn_uri: turn:ltc.turn.geant.org:443?transport=tcp
-turn_user: user
-turn_password: password
+turn_uri: turn:turn1.cm.cybergate.lk:443?transport=tcp
+turn_user: cybermeet
+turn_password: ###################################
 
 # Introduced in version: 3.3.0
 # If you part of the NREN community then
 # goto https://turn.geant.org to get your api key.
-turn_api_uri: "https://api.turn.geant.org/turn"
-turn_api_key: ""
+turn_api_uri: "https://turn2.cm.cybergate.lk"
+turn_api_key: "############################"
 
 # session cookie secret
 cookie_secret: secret-cookie
