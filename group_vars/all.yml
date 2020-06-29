@@ -12,13 +12,13 @@ edumeet_tag: latest
 # or dev for develop
 config_template_version: dev
 
-fqdn_host: meet
-fqdn_domain: example.com
+fqdn_host: node1
+fqdn_domain: meeting.cyber.lk
 
 # let's encrypt
 cert_domains:
   - "{{ fqdn_host }}.{{ fqdn_domain }}"
-cert_email: "user@example.com"
+cert_email: "chinthaka@cybergate.lk"
 
 # TURN
 turn_uri: "turn:turn1.cm.cybergate.lk:443?transport=tcp"
@@ -32,7 +32,7 @@ turn_api_uri: "https://turn2.cm.cybergate.lk"
 turn_api_key: "#######################################"
 
 # session cookie secret
-cookie_secret: secret-cookie
+cookie_secret: cybermeet-secret-cookie
 
 # Page head short title
 title: "Cyber Meeting"
