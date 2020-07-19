@@ -140,7 +140,7 @@
 - name: "pull docker image edumeet/edumeet:{{edumeet_tag}}"
   become: true
   docker_image:
-    name: cybermeet/cybermeet
+    name: cghub/cybermeet
     tag: "{{edumeet_tag}}"
     source: pull
     force_source: true
