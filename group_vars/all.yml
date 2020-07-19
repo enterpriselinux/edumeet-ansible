@@ -4,7 +4,7 @@ deployment_directory: "/home/{{ ansible_user }}/cybermeet"
 
 # branch https://github.com/edumeet/edumeet-docker
 edumeet_branch: develop
-# docker tag https://hub.docker.com/r/edumeet/edumeet/
+# docker tag https://hub.docker.com/r/cghub/cybermeet:dev
 edumeet_tag: latest
 
 # use the appropriate config templete
