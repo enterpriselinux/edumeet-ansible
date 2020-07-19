@@ -1,8 +1,8 @@
 ---
-# branch https://github.com/edumeet/edumeet-docker
-edumeet_branch: master
-# docker tag https://hub.docker.com/r/edumeet/edumeet/
-edumeet_tag: latest
+# branch https://github.com/enterpriselinux/edumeet-docker
+edumeet_branch: develop
+# docker tag https://hub.docker.com/r/cghub/cybermeet
+edumeet_tag: dev
 
 # use the appropriate config templete
 # set it to multiparty-meeting version
